@@ -53,6 +53,7 @@ button:hover{
     display: none;
     justify-content: center;
     align-items: center;
+    font-family: 'Manrope', sans-serif;
 }
 
 #arrow i{
@@ -63,7 +64,7 @@ button:hover{
     font-size: 0.8em;
     font-family: 'Baloo Bhaina 2', cursive;
     font-weight: 400;
-    display: inline-block;
+
 }
 
 #header-2{
@@ -177,27 +178,30 @@ transition: ease 0.3s;
 }
 
 #title{
-    font-family: 'Baloo Bhaina 2', cursive;
+    font-family: 'Manrope', sans-serif;
     font-weight: 400;
+    font-size: 1.2em;
 }
 
 .happy-bible-box p{
     margin-top:12px;
     margin-bottom:30px;
-    font-family: 'Baloo Bhaina 2', cursive;
-    transition: all 0.5s;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 0.9em;
+    line-height: 2;
 }
 
 .box-button{
     padding-left:20px;
     padding-right: 20px;
-    padding-top:10px;
-    padding-bottom:10px;
+    padding-top:12px;
+    padding-bottom:12px;
     border: solid 1.5px white;
     border-radius: 50px;
     background-color:transparent;
     color:white;
-    font-family: 'Baloo Bhaina 2', cursive;
+    font-family: 'Manrope', sans-serif;
 }
 
 footer{
