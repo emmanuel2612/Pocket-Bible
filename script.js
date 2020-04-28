@@ -150,7 +150,6 @@ window.onload = () => {
         pageVerse.innerHTML = newVerse;
 
 
-
     }
 
 
@@ -286,7 +285,7 @@ window.onload = () => {
         nextVerseButton.onclick = () => {
 
             bibleBox.classList.add("fade-out");
-            setTimeout(changeAngryText, 300); 
+            setTimeout(changeAnxiousText, 300); 
         }
 
         bibleBox.ontransitionend = () =>{
@@ -432,11 +431,11 @@ window.onload = () => {
         introQuestion.style.display = "none";
         arrow.style.display = "flex";
         bibleBox.style.display = "block";
-        changelowText();
+        changeLowText();
 
         nextVerseButton.onclick = () => {
             bibleBox.classList.add("fade-out");
-            setTimeout(changeAngryText, 300); 
+            setTimeout(changeLowText, 300); 
         }
 
         bibleBox.ontransitionend = () =>{
@@ -446,7 +445,7 @@ window.onload = () => {
     }
 
 
-    changelowText = () => {
+    changeLowText = () => {
         let randomVerse = lowVerses[Math.floor(Math.random() * lowVerses.length)]; /* Gets a random verse object */
         let newTitle = randomVerse.title; /* Puts random verse title in variable to call in innerHTML*/
         let newVerse = randomVerse.verse; /* Puts random verse verse in variable to call in innerHTML*/
@@ -526,11 +525,11 @@ window.onload = () => {
         introQuestion.style.display = "none";
         arrow.style.display = "flex";
         bibleBox.style.display = "block";
-        changelonelyText();
+        changeLonelyText();
 
         nextVerseButton.onclick = () => {
             bibleBox.classList.add("fade-out");
-            setTimeout(changeAngryText, 300); 
+            setTimeout(changeLonelyText, 300); 
         }
 
         bibleBox.ontransitionend = () =>{
