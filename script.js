@@ -285,8 +285,12 @@ window.onload = () => {
 
         nextVerseButton.onclick = () => {
 
-            bibleBox.classList.add("fade");
-            changeAnxiousText();
+            bibleBox.classList.add("fade-out");
+            setTimeout(changeAngryText, 300); 
+        }
+
+        bibleBox.ontransitionend = () =>{
+            bibleBox.classList.remove("fade-out");
         }
 
     }
@@ -431,7 +435,12 @@ window.onload = () => {
         changelowText();
 
         nextVerseButton.onclick = () => {
-            changelowText();
+            bibleBox.classList.add("fade-out");
+            setTimeout(changeAngryText, 300); 
+        }
+
+        bibleBox.ontransitionend = () =>{
+            bibleBox.classList.remove("fade-out");
         }
 
     }
@@ -520,7 +529,12 @@ window.onload = () => {
         changelonelyText();
 
         nextVerseButton.onclick = () => {
-            changelonelyText();
+            bibleBox.classList.add("fade-out");
+            setTimeout(changeAngryText, 300); 
+        }
+
+        bibleBox.ontransitionend = () =>{
+            bibleBox.classList.remove("fade-out");
         }
 
     }
