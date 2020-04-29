@@ -328,11 +328,13 @@ window.onload = () => {
         arrow.style.display = "inline-block";
         bibleBox.style.display = "block";
         changeAnxiousText();
+        changeBodyColor();
 
         nextVerseButton.onclick = () => {
 
             bibleBox.classList.add("fade-out");
-            setTimeout(changeAnxiousText, 300); 
+            setTimeout(changeAnxiousText, 300);
+            setTimeout(changeBodyColor,350);
         }
 
         bibleBox.ontransitionend = () =>{
@@ -487,6 +489,7 @@ window.onload = () => {
         nextVerseButton.onclick = () => {
             bibleBox.classList.add("fade-out");
             setTimeout(changeLowText, 300); 
+            setTimeout(changeBodyColor,350);
         }
 
         bibleBox.ontransitionend = () =>{
@@ -585,6 +588,7 @@ window.onload = () => {
         nextVerseButton.onclick = () => {
             bibleBox.classList.add("fade-out");
             setTimeout(changeLonelyText, 300); 
+            setTimeout(changeBodyColor,350);
         }
 
         bibleBox.ontransitionend = () =>{
