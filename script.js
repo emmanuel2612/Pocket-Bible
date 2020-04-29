@@ -3,6 +3,8 @@ window.onload = () => {
 
     /* HTML ELEMENTS */
 
+    var pageBody = document.getElementById("main");
+
     var arrow = document.getElementById("arrow");
 
     var welcomeButton = document.getElementById("welcome-button");
@@ -24,6 +26,9 @@ window.onload = () => {
 
     /* END OF HTML ELEMENTS*/
 
+
+
+
     welcomeButton.onclick = () => {
         welcomeBox.style.display = "none";
         introQuestion.style.display = "flex";
@@ -33,8 +38,23 @@ window.onload = () => {
         arrow.style.display = "none";
         introQuestion.style.display = "flex";
         bibleBox.style.display = "none";
+        pageBody.style.backgroundColor = "#191919";
 
     }
+
+
+    
+
+    
+
+    changeBodyColor = () => {
+        const backgroundColors = [/*dark-red*/"#ff4342", /*pale orange*/"#e17055", /*dark green*/"#00b894"];
+        let randomColor = backgroundColors[Math.floor(Math.random() * backgroundColors.length)];  /*Put this INSIDE the changeBody function so it runs everytime the next verse button is clicked.*/
+        pageBody.style.backgroundColor = randomColor;
+    }
+
+    
+   
 
 
     /*ANGRY VERSES ARAY*/
@@ -119,6 +139,8 @@ window.onload = () => {
     /* END OF ANGRY VERSES ARRAY*/
 
 
+
+
     /*ANGRY PROGRAM*/
 
     angryButton.onclick = () => {
@@ -127,10 +149,12 @@ window.onload = () => {
         arrow.style.display = "flex";
         bibleBox.style.display = "block";
         changeAngryText();                  /*Randomize text */
+        changeBodyColor();
 
         nextVerseButton.onclick = () => {
             bibleBox.classList.add("fade-out");
             setTimeout(changeAngryText, 300); /*Change text after 300ms while it's faded so it shows the new text when fade-out class is removed*/
+            setTimeout(changeBodyColor,350);
 
         }
 
@@ -539,7 +563,7 @@ window.onload = () => {
     }
 
 
-    changelonelyText = () => {
+    changeLonelyText = () => {
         let randomVerse = lonelyVerses[Math.floor(Math.random() * lonelyVerses.length)]; /* Gets a random verse object */
         let newTitle = randomVerse.title; /* Puts random verse title in variable to call in innerHTML*/
         let newVerse = randomVerse.verse; /* Puts random verse verse in variable to call in innerHTML*/

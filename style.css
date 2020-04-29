@@ -14,6 +14,8 @@
 }
 
 
+
+
 button{
     cursor: pointer;
     transition: ease 0.3s;
@@ -24,6 +26,23 @@ button:hover{
     color:black !important;
     transform: scale(1.1,1.1);
     
+}
+
+#light-container{
+    width:50px;
+    height:50px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self:flex-end;
+    position: absolute;
+    bottom: 50;
+}
+
+#light-container i{
+    font-size:1.4em;
 }
 
 
@@ -86,6 +105,7 @@ main{
     justify-content: center;
     align-items: center;
     background-color:#191919;
+    transition: ease 0.3s;
 }
 
 #main-wrap {
