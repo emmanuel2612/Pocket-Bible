@@ -14,6 +14,14 @@
 }
 
 
+  ::-webkit-scrollbar-thumb {
+    background: #424242; 
+  }
+
+  ::-webkit-scrollbar {
+    background-color:white;
+}
+
 
 
 button{
@@ -45,7 +53,56 @@ button:hover{
     font-size:1.4em;
 }
 
+header{
+    background-color:#141414;
+    height:100px;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+#logo{
+    font-size:1.2em;
+    color:white;
+    align-self: flex-start;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+main{
+    height:100vh;
+    background-color:#141414;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: ease-in-out 0.3s;
+    background: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url("background.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+nav{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:50px;
+}
+
+
+#main-wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height:500px;
+    padding-left:5%;
+    padding-right:5%;
+    margin:0 !important;
+    
+}
 
 
 .page-wrap{
@@ -53,31 +110,23 @@ button:hover{
     max-width:100%; /*Wrapper width*/
     margin-left:5%;  /*Nice space between content and device border*/
     margin-right:5%;  /*Nice space between content and device border*/
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height:500px;
-    position: relative;
 }
 
 #arrow{
-    align-self: flex-start;
-    position: absolute;
-    top:0;
+
     font-size:1.5em;
     color:white;
     display: none;
     cursor: pointer;
     display: none;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Manrope', sans-serif;
+    align-self: flex-start;
+    transition: ease-in-out 0.3s;
+
 }
 
-#arrow i{
-    margin-right: 10px;
-}
+
+
+
 
 #back{
     font-size: 0.8em;
@@ -98,22 +147,8 @@ button:hover{
     color:white;
 }
 
-main{
-    width:100%;
-    height:100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color:#191919;
-    transition: ease 0.3s;
-}
 
-#main-wrap {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
+
 
 #welcome-box{
     display: flex;
@@ -126,13 +161,14 @@ main{
     color:white;
     margin-bottom: 12px;
     text-align: center;
+    font-family: 'Open Sans'
 }
 
 #welcome-button{
     width:153.11px;
     padding-top:10px;
     padding-bottom: 10px;
-    border: solid 1.5px white;
+    border: solid 2px white;
     border-radius: 50px;
     background-color:transparent;
     color:white;
@@ -168,8 +204,8 @@ main{
 
 #intro-question button{
     padding:12px;
-    border: solid 1.5px white;
-    border-radius: 50px;
+    border: solid 2px white;
+    border-radius: 1px;
     background-color:transparent;
     color:white;
     font-family: ;'Baloo Bhaina 2', cursive;
@@ -224,11 +260,32 @@ transition: ease 0.3s;
     font-family: 'Manrope', sans-serif;
 }
 
-footer{
-    position: absolute;
-    bottom:50;
-    color:#666666;
+
+section{
+    height:400px;
+    width:100%;
+    padding-top:50px;
+    padding-bottom:50px;
+    display: flex;
+    justify-content: center;
 }
+
+
+
+
+
+footer{
+    height:100px;
+    width:100%;
+    background-color:#141414;
+    color:#898989;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Open Sans';
+    font-size:0.8em;
+}
+
 
 
 

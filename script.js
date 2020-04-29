@@ -32,26 +32,45 @@ window.onload = () => {
     welcomeButton.onclick = () => {
         welcomeBox.style.display = "none";
         introQuestion.style.display = "flex";
+        arrow.style.display = "block";
+
+        arrow.onclick = () =>{
+            introQuestion.style.display = "none";
+            welcomeBox.style.display = "flex";
+            arrow.style.display = "none";
+        }
+
+
     }
 
-    arrow.onclick = () => {
-        arrow.style.display = "none";
+
+
+        backToQuestions = () => {
         introQuestion.style.display = "flex";
         bibleBox.style.display = "none";
-        pageBody.style.backgroundColor = "#191919";
+       /* pageBody.style.backgroundColor = "#191919";*/
+
+        arrow.onclick = () =>{
+            arrow.style.display = "none";
+            introQuestion.style.display = "none";
+            welcomeBox.style.display = "flex";
+        }
 
     }
-
 
     
 
     
 
-    changeBodyColor = () => {
-        const backgroundColors = [/*blue*/"#00cec9", /*pale orange*/"#e17055", /*dark green*/"#00b894"];
-        let randomColor = backgroundColors[Math.floor(Math.random() * backgroundColors.length)];  /*Put this INSIDE the changeBody function so it runs everytime the next verse button is clicked.*/
-        pageBody.style.backgroundColor = randomColor;
-    }
+    
+
+    
+
+   changeBodyColor = () => {
+      const backgroundColors = [/*blue*/"#0abde3", /*pale orange*/"#e17055", /*dark green*/"#00b894"];
+       let randomColor = backgroundColors[Math.floor(Math.random() * backgroundColors.length)];  /*Put this INSIDE the changeBody function so it runs everytime the next verse button is clicked.*/
+       pageBody.style.background = randomColor;
+   } 
 
     
    
@@ -146,7 +165,7 @@ window.onload = () => {
     angryButton.onclick = () => {
 
         introQuestion.style.display = "none";
-        arrow.style.display = "flex";
+        arrow.style.display = "inline-block";
         bibleBox.style.display = "block";
         changeAngryText();                  /*Randomize text */
         changeBodyColor();
@@ -160,6 +179,10 @@ window.onload = () => {
 
         bibleBox.ontransitionend = () =>{
             bibleBox.classList.remove("fade-out");
+        }
+
+        arrow.onclick = () => {
+            backToQuestions();
         }
 
     }
@@ -302,7 +325,7 @@ window.onload = () => {
     anxiousButton.onclick = () => {
 
         introQuestion.style.display = "none";
-        arrow.style.display = "flex";
+        arrow.style.display = "inline-block";
         bibleBox.style.display = "block";
         changeAnxiousText();
 
@@ -314,6 +337,10 @@ window.onload = () => {
 
         bibleBox.ontransitionend = () =>{
             bibleBox.classList.remove("fade-out");
+        }
+
+        arrow.onclick = () =>{
+            backToQuestions();
         }
 
     }
@@ -453,7 +480,7 @@ window.onload = () => {
     lowButton.onclick = () => {
 
         introQuestion.style.display = "none";
-        arrow.style.display = "flex";
+        arrow.style.display = "inline-block";
         bibleBox.style.display = "block";
         changeLowText();
 
@@ -464,6 +491,10 @@ window.onload = () => {
 
         bibleBox.ontransitionend = () =>{
             bibleBox.classList.remove("fade-out");
+        }
+
+        arrow.onclick = () =>{
+            backToQuestions();
         }
 
     }
@@ -547,7 +578,7 @@ window.onload = () => {
     lonelyButton.onclick = () => {
 
         introQuestion.style.display = "none";
-        arrow.style.display = "flex";
+        arrow.style.display = "inline-block";
         bibleBox.style.display = "block";
         changeLonelyText();
 
@@ -558,6 +589,10 @@ window.onload = () => {
 
         bibleBox.ontransitionend = () =>{
             bibleBox.classList.remove("fade-out");
+        }
+
+        arrow.onclick = () =>{
+            backToQuestions();
         }
 
     }
