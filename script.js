@@ -48,7 +48,7 @@ window.onload = () => {
     
 
     changeBodyColor = () => {
-        const backgroundColors = [/*dark-red*/"#ff4342", /*pale orange*/"#e17055", /*dark green*/"#00b894"];
+        const backgroundColors = [/*dark-red*/"#d63031", /*pale orange*/"#e17055", /*dark green*/"#00b894"];
         let randomColor = backgroundColors[Math.floor(Math.random() * backgroundColors.length)];  /*Put this INSIDE the changeBody function so it runs everytime the next verse button is clicked.*/
         pageBody.style.backgroundColor = randomColor;
     }
