@@ -28,17 +28,52 @@ window.onload = () => {
 
 
 
-
     welcomeButton.onclick = () => {
+
+        setTimeout(function(){
+            introQuestion.style.opacity = "1";
+           }, 100);
+
+    
+      
         welcomeBox.style.display = "none";
+
+
+    
+     
         introQuestion.style.display = "flex";
-        arrow.style.display = "block";
+        arrow.style.display = "inline-block";
+        pageBody.classList.add("bodyExpand");
+
+        introQuestion.classList.remove("fadeout");
+
+
 
         arrow.onclick = () =>{
-            introQuestion.style.display = "none";
-            welcomeBox.style.display = "flex";
-            arrow.style.display = "none";
-        }
+
+            setTimeout(function(){
+                introQuestion.style.opacity = "0";
+               }, 100);
+           
+
+            introQuestion.classList.add("fadeout");
+
+            setTimeout(function(){
+                welcomeBox.style.display = "flex";
+               }, 400);
+
+            setTimeout(function(){
+                arrow.style.display = "none";
+            }, 300);
+
+
+            pageBody.classList.remove("bodyExpand");
+
+            setTimeout(function(){
+                introQuestion.style.display = "none";
+               }, 300);
+
+             }
 
 
     }
@@ -54,6 +89,10 @@ window.onload = () => {
             arrow.style.display = "none";
             introQuestion.style.display = "none";
             welcomeBox.style.display = "flex";
+            pageBody.classList.remove("bodyExpand");
+            pageBody.style.backgroundColor = "#141414";
+
+            
         }
 
     }
@@ -183,6 +222,7 @@ window.onload = () => {
 
         arrow.onclick = () => {
             backToQuestions();
+            pageBody.style.backgroundColor = "#141414";
         }
 
     }
@@ -343,6 +383,7 @@ window.onload = () => {
 
         arrow.onclick = () =>{
             backToQuestions();
+            pageBody.style.backgroundColor = "#141414";
         }
 
     }
@@ -485,6 +526,7 @@ window.onload = () => {
         arrow.style.display = "inline-block";
         bibleBox.style.display = "block";
         changeLowText();
+        changeBodyColor();
 
         nextVerseButton.onclick = () => {
             bibleBox.classList.add("fade-out");
@@ -498,6 +540,7 @@ window.onload = () => {
 
         arrow.onclick = () =>{
             backToQuestions();
+            pageBody.style.backgroundColor = "#141414";
         }
 
     }
@@ -584,6 +627,7 @@ window.onload = () => {
         arrow.style.display = "inline-block";
         bibleBox.style.display = "block";
         changeLonelyText();
+        changeBodyColor();
 
         nextVerseButton.onclick = () => {
             bibleBox.classList.add("fade-out");
@@ -597,6 +641,7 @@ window.onload = () => {
 
         arrow.onclick = () =>{
             backToQuestions();
+            pageBody.style.backgroundColor = "#141414";
         }
 
     }
