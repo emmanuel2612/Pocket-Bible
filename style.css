@@ -133,7 +133,7 @@ main{
 @media only screen and (max-width: 730px) {
     main {
 
-      height:210px
+      height:210px;
     }
   }
 
@@ -242,7 +242,7 @@ nav{
     color:white;
     font-family: 'Baloo Bhaina 2', cursive;
     position: relative;
-    bottom:45%;
+    bottom:25px;
 }
 
 
