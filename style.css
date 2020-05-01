@@ -250,35 +250,34 @@ nav{
     display: flex;
     justify-content: flex-start;
     width: 100%;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    scrollbar-width: 5%;
-    padding-bottom: 50px;
-    
+    overflow-x: scroll !important;
+    overflow-y: hidden !important;
+    scrollbar-width: 5% !important;
+    padding-bottom: 50px !important;
 }
 
 @media only screen and (max-width: 730px) {
     #button-div {
-     padding-bottom: 0;
-      overflow-x: hidden;
-      overflow-y: scroll;
-      height:300px;
-      padding-right: 50px;
+     padding-bottom: 0 !important;
+      overflow-x: hidden !important;
+      overflow-y: scroll !important;
+      height:300px !important;
+      padding-right: 50px !important;
 
     }
   }
 
 #button-div::-webkit-scrollbar {
-    height: 5px;
-    overflow-x: scroll;
-    background-color:white;
+    height: 5px !important; 
+    overflow-x: scroll !important;
+    background-color:white !important;
     border-radius: 50px;
 
 }
 
 @media only screen and (max-width: 730px) {
     #button-div::-webkit-scrollbar {
-     width:5px;
+     width:5px !important;
 
     }
   }
@@ -286,19 +285,19 @@ nav{
 
 
 #button-div::-webkit-scrollbar-track {
-    background-color:#424242;
+    background-color:#424242 !important;
 }
 
 #button-div::-webkit-scrollbar-thumb {
-    background-color:white;
+    background-color:white !important;
 }
 
 
 
 @media only screen and (max-width: 730px) {
     #button-div {
-      flex-direction: column;
-      width:50%;
+      flex-direction: column !important;
+      width:50% !important;
     }
   }
 
