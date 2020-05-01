@@ -30,17 +30,17 @@ window.onload = () => {
 
     welcomeButton.onclick = () => {
 
-        setTimeout(function(){
+        setTimeout(function () {
             introQuestion.style.opacity = "1";
-           }, 100);
+        }, 100);
 
-    
-      
+
+
         welcomeBox.style.display = "none";
 
 
-    
-     
+
+
         introQuestion.style.display = "flex";
         arrow.style.display = "inline-block";
         pageBody.classList.add("bodyExpand");
@@ -49,70 +49,83 @@ window.onload = () => {
 
 
 
-        arrow.onclick = () =>{
+        arrow.onclick = () => {
 
-            setTimeout(function(){
-                introQuestion.style.opacity = "0";
-               }, 100);
-           
+
+            introQuestion.style.opacity = "0";
+
+
 
             introQuestion.classList.add("fadeout");
 
-            setTimeout(function(){
+            setTimeout(function () {
                 welcomeBox.style.display = "flex";
-               }, 400);
+            }, 400);
 
-            setTimeout(function(){
+            setTimeout(function () {
                 arrow.style.display = "none";
             }, 300);
 
 
             pageBody.classList.remove("bodyExpand");
 
-            setTimeout(function(){
+            setTimeout(function () {
                 introQuestion.style.display = "none";
-               }, 300);
+            }, 300);
 
-             }
+        }
 
 
     }
 
 
 
-        backToQuestions = () => {
+    backToQuestions = () => {
         introQuestion.style.display = "flex";
         bibleBox.style.display = "none";
-       /* pageBody.style.backgroundColor = "#191919";*/
+        /* pageBody.style.backgroundColor = "#191919";*/
 
-        arrow.onclick = () =>{
-            arrow.style.display = "none";
-            introQuestion.style.display = "none";
-            welcomeBox.style.display = "flex";
+        arrow.onclick = () => {
+
+            setTimeout(function () {
+                arrow.style.display = "none";
+            }, 300);
+
+            setTimeout(function () {
+                introQuestion.style.display = "none";
+            }, 300);
+
+            setTimeout(function () {
+                welcomeBox.style.display = "flex";
+            }, 400);
+
             pageBody.classList.remove("bodyExpand");
             pageBody.style.backgroundColor = "#141414";
 
-            
+
+            introQuestion.style.opacity = "0";
+
+
         }
 
     }
 
-    
 
-    
 
-    
 
-    
 
-   changeBodyColor = () => {
-      const backgroundColors = [/*blue*/"#0abde3", /*pale orange*/"#e17055", /*dark green*/"#00b894"];
-       let randomColor = backgroundColors[Math.floor(Math.random() * backgroundColors.length)];  /*Put this INSIDE the changeBody function so it runs everytime the next verse button is clicked.*/
-       pageBody.style.background = randomColor;
-   } 
 
-    
-   
+
+
+
+    changeBodyColor = () => {
+        const backgroundColors = [/*blue*/"#0abde3", /*pale orange*/"#e17055", /*dark green*/"#00b894"];
+        let randomColor = backgroundColors[Math.floor(Math.random() * backgroundColors.length)];  /*Put this INSIDE the changeBody function so it runs everytime the next verse button is clicked.*/
+        pageBody.style.background = randomColor;
+    }
+
+
+
 
 
     /*ANGRY VERSES ARAY*/
@@ -212,17 +225,18 @@ window.onload = () => {
         nextVerseButton.onclick = () => {
             bibleBox.classList.add("fade-out");
             setTimeout(changeAngryText, 300); /*Change text after 300ms while it's faded so it shows the new text when fade-out class is removed*/
-            setTimeout(changeBodyColor,350);
+            setTimeout(changeBodyColor, 350);
 
         }
 
-        bibleBox.ontransitionend = () =>{
+        bibleBox.ontransitionend = () => {
             bibleBox.classList.remove("fade-out");
         }
 
         arrow.onclick = () => {
             backToQuestions();
             pageBody.style.backgroundColor = "#141414";
+
         }
 
     }
@@ -235,7 +249,7 @@ window.onload = () => {
 
         pageTitle.innerHTML = newTitle;
         pageVerse.innerHTML = newVerse;
-
+    
 
     }
 
@@ -374,14 +388,14 @@ window.onload = () => {
 
             bibleBox.classList.add("fade-out");
             setTimeout(changeAnxiousText, 300);
-            setTimeout(changeBodyColor,350);
+            setTimeout(changeBodyColor, 350);
         }
 
-        bibleBox.ontransitionend = () =>{
+        bibleBox.ontransitionend = () => {
             bibleBox.classList.remove("fade-out");
         }
 
-        arrow.onclick = () =>{
+        arrow.onclick = () => {
             backToQuestions();
             pageBody.style.backgroundColor = "#141414";
         }
@@ -530,15 +544,15 @@ window.onload = () => {
 
         nextVerseButton.onclick = () => {
             bibleBox.classList.add("fade-out");
-            setTimeout(changeLowText, 300); 
-            setTimeout(changeBodyColor,350);
+            setTimeout(changeLowText, 300);
+            setTimeout(changeBodyColor, 350);
         }
 
-        bibleBox.ontransitionend = () =>{
+        bibleBox.ontransitionend = () => {
             bibleBox.classList.remove("fade-out");
         }
 
-        arrow.onclick = () =>{
+        arrow.onclick = () => {
             backToQuestions();
             pageBody.style.backgroundColor = "#141414";
         }
@@ -631,15 +645,15 @@ window.onload = () => {
 
         nextVerseButton.onclick = () => {
             bibleBox.classList.add("fade-out");
-            setTimeout(changeLonelyText, 300); 
-            setTimeout(changeBodyColor,350);
+            setTimeout(changeLonelyText, 300);
+            setTimeout(changeBodyColor, 350);
         }
 
-        bibleBox.ontransitionend = () =>{
+        bibleBox.ontransitionend = () => {
             bibleBox.classList.remove("fade-out");
         }
 
-        arrow.onclick = () =>{
+        arrow.onclick = () => {
             backToQuestions();
             pageBody.style.backgroundColor = "#141414";
         }
