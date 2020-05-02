@@ -3,6 +3,8 @@ window.onload = () => {
 
     /* HTML ELEMENTS */
 
+    var logo = document.getElementById("logo");
+
     var pageBody = document.getElementById("main");
 
     var arrow = document.getElementById("arrow");
